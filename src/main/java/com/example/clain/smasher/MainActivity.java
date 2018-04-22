@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //adding a click listener
         buttonPlay.setOnClickListener(this);
         buttonScore.setOnClickListener(this);
+
     }
 
     @Override

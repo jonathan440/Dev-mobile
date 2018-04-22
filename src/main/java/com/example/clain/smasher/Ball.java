@@ -1,5 +1,7 @@
 package com.example.clain.smasher;
 
+
+
 import android.graphics.RectF;
 
 import java.util.Random;
@@ -76,7 +78,7 @@ public class Ball {
         rect.left = x / 2;
         rect.top = y - 60;
         rect.right = x / 2 + ballWidth;
-        rect.bottom = y - 20 - ballHeight;
+        rect.bottom = y - 60 - ballHeight;
     }
 
 }

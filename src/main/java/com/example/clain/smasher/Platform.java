@@ -1,5 +1,7 @@
 package com.example.clain.smasher;
 
+
+
 import android.graphics.RectF;
 
 public class Platform {
@@ -7,8 +9,8 @@ public class Platform {
     private RectF rect;
 
     // longueur et hauteur
-    public float length;
-    public float height;
+    private float length;
+    private float height;
 
     // X is the far left of the rectangle which forms our paddle
     private float x;
@@ -31,26 +33,23 @@ public class Platform {
     // in the screen width and height
     public Platform(int screenX, int screenY){
         // 130 pixels wide and 20 pixels high
-        length = 130;
-        height = 20;
+        length = 150;
+        height = 30;
 
         // Start paddle in roughly the sceen centre
         x = screenX / 2;
-        y = screenY - 150;
+        y = screenY - 60;
 
-        rect = new RectF(x, y, x + length, y + height);
-
-
+        rect = new RectF(x, y, x + length,y + height);
 
         // How fast is the paddle in pixels per second
         platformSpeed = 500;
     }
 
-    // This is a getter method to make the rectangle that
-    // defines our paddle available in BreakoutView class
-    public RectF getRect(){return rect;}
-
-
+    // This is a getter method to make the rectangle
+    public RectF getRect() {
+        return this.rect;
+    }
 
     // This method will be used to change/set if the paddle is going left, right or nowhere
     public void setMovementState(int state){

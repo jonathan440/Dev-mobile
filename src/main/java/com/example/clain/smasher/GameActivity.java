@@ -47,6 +47,7 @@ public class GameActivity extends AppCompatActivity {
         super.onPause();
         // Tell the gameView pause method to execute
         gameView.pause();
+        System.out.println("pause");
     }
 
 
